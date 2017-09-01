@@ -17,7 +17,7 @@ class CreateEmployeeTable extends Migration
             $table->increments('idemployee');
             $table->string('employeecode',30);
             $table->string('employeename',800);
-            $table->integer();
+            $table->integer('idstaterow');
             $table->string('hostname',800);
             $table->timestamps();
         });

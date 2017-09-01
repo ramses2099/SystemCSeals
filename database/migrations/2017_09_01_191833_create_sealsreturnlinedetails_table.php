@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSealsgivehitdetailsTable extends Migration
+class CreateSealsreturnlinedetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateSealsgivehitdetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sealsgivehitdetails', function (Blueprint $table) {
-            $table->increments('idsealsgivehitdetails');
-            $table->integer('idsealsgivehit');
-            $table->integer('sealssequence');            
+        Schema::create('sealsreturnlinedetails', function (Blueprint $table) {
+            $table->increments('idsealsreturnlinedetails');
+            $table->integer('idsealsreturnline');
+            $table->string('sealssequence',40);
             $table->integer('idsealsstate');
             $table->integer('idstaterow');
             $table->string('hostname');
@@ -31,6 +31,6 @@ class CreateSealsgivehitdetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sealsgivehitdetails');
+        Schema::dropIfExists('sealsreturnlinedetails');
     }
 }
