@@ -15,6 +15,7 @@ class CreateSealsgivehitdetailsTable extends Migration
     {
         Schema::create('sealsgivehitdetails', function (Blueprint $table) {
             $table->increments('id');
+            
             $table->timestamps();
         });
     }
