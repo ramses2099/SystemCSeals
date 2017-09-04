@@ -36,6 +36,11 @@
                 <section class="wrapper">
                     @yield('content')                
                 </section>
+                <div class="text-right">
+                    <div class="credits">
+                      <a href="http://hit.com.do/">© 2017 Haina Internationals Terminal</a> by <a href="#">Ramses2099</a>
+                    </div>
+                </div>
             </section>
         @else
             @yield('content')
