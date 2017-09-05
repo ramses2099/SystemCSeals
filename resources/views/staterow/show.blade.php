@@ -49,7 +49,7 @@
                                 <td>
                                    <div class="form-group">
                                      <div class="col-lg-12 text-right">
-                                        <a class="btn btn-primary" href="{!! action('StateRow\StateRowController@index')!!}">Edit State Row</a>
+                                        <a class="btn btn-primary" href="{!! action('StateRow\StateRowController@edit', $staterow->idstaterow)!!}">Edit State Row</a>
                                         <a class="btn btn-success" href="{!! action('StateRow\StateRowController@index')!!}">Backt to list</a>
                                      </div>
                                     </div>     

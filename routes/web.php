@@ -24,7 +24,8 @@ Route::get('/staterow', 'StateRow\StateRowController@index')->name('index');
 Route::get('/staterow/{idstaterow?}', 'StateRow\StateRowController@show')->name('show');
 Route::get('/staterows/create', 'StateRow\StateRowController@create')->name('Create');
 Route::post('/staterows/create', 'StateRow\StateRowController@store')->name('Create');
-
+Route::get('/staterow/{idstaterow?}/edit', 'StateRow\StateRowController@edit')->name('edit');
+Route::post('/staterow/{idstaterow?}/edit', 'StateRow\StateRowController@update')->name('edit');
 
 
 Route::get('/logout',  function ()

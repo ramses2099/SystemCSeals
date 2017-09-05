@@ -68,9 +68,10 @@ class StateRowController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($idstaterow)
     {
-        //
+        $staterow = StateRow::where('idstaterow',$idstaterow)->firstOrFail();
+        return view('/staterow/edit',compact('staterow'));
     }
 
     /**
@@ -80,9 +81,13 @@ class StateRowController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StateRowFormRequest $request, $idstaterow)
     {
-        //
+        StateRow::where('idstaterow',$idstaterow)->update(array(
+            'descripcion' => $request->get('descripcion'),
+        )); 
+
+        return redirect('/staterow/'.$idstaterow.'/edit')->with('status','State row update successfuly...');
     }
 
     /**
