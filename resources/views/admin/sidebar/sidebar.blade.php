@@ -16,7 +16,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="#">Seals Category</a></li>                          
+                          <li><a class="" href="{!! action('SealsCategory\SealsCategoryController@index')!!}">Seals Category</a></li>                          
                           <li><a class="" href="#">Selas Process</a></li>
                           <li><a class="" href="#">Selas Types</a></li>
                           <li><a class="" href="#">Selas Box</a></li>

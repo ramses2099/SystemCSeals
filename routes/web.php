@@ -29,7 +29,12 @@ Route::post('/staterow/{idstaterow?}/edit', 'StateRow\StateRowController@update'
 
 
 //SealsCatogory
-
+Route::get('/sealscatogorys', 'SealsCategory\SealsCategoryController@index')->name('index');
+Route::get('/sealscatogorys/create', 'SealsCategory\SealsCategoryController@create')->name('Create');
+Route::get('/sealscatogorys/{idsealscatogory?}', 'SealsCategory\SealsCategoryController@show')->name('show');
+Route::post('/sealscatogorys/create', 'SealsCategory\SealsCategoryController@store')->name('Create');
+Route::get('/sealscatogorys/{idsealscatogory?}/edit', 'SealsCategory\SealsCategoryController@edit')->name('edit');
+Route::post('/sealscatogorys/{idsealscatogory?}/edit', 'SealsCategory\SealsCategoryController@update')->name('edit');
 
 
 
