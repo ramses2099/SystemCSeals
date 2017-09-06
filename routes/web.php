@@ -28,6 +28,11 @@ Route::get('/staterow/{idstaterow?}/edit', 'StateRow\StateRowController@edit')->
 Route::post('/staterow/{idstaterow?}/edit', 'StateRow\StateRowController@update')->name('edit');
 
 
+//SealsCatogory
+
+
+
+
 Route::get('/logout',  function ()
 {
    Auth::logout(); 
