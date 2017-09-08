@@ -25,7 +25,7 @@ class VesselVisitFormRequest extends FormRequest
     {
         return [
             'visits' => 'required|min:5|max:100',
-            'voyage' => 'required|min:5|max:100',
+            'voyage' => 'required|min:2|max:100',
             'vesselname' => 'required|min:5|max:500',
             'idstaterow'=>'required'
         ];
